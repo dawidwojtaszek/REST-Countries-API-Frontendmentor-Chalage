@@ -1,10 +1,16 @@
 import CardWrap from "./item-card-style";
 export const ItemCard = ({ name, flag, population, region, capital }) => {
+  const link = name.split(" ");
+  let correctLink = "";
+  link.length > 1
+    ? (correctLink = link.join("-"))
+    : (correctLink = link.join(""));
+
   return (
     <CardWrap>
       <CardWrap.Flag src={flag} alt={`${name} flag`} />
       <CardWrap.Info>
-        <CardWrap.Name to={`/${name}`}>{name}</CardWrap.Name>
+        <CardWrap.Name to={`/${correctLink}`}>{name}</CardWrap.Name>
 
         <CardWrap.StatBox>
           <CardWrap.StatName>Population: </CardWrap.StatName>

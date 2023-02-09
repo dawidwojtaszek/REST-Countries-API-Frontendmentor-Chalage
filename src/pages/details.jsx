@@ -6,6 +6,8 @@ import { SEO } from "../components/SEO/SEO";
 
 export const DetailsPage = () => {
   const { countryName } = useParams();
+  const unLink = countryName.split("-");
+  const correctCountryName = unLink.join(" ");
   const [isLoading, setLoading] = useState(true);
   const [country, setCountry] = useState([]);
   const [border, setBorder] = useState([]);
@@ -47,8 +49,8 @@ export const DetailsPage = () => {
       }
     }
 
-    fetchData(countryName);
-  }, [countryName]);
+    fetchData(correctCountryName);
+  }, [correctCountryName]);
 
   return (
     <>
