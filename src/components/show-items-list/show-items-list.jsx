@@ -6,7 +6,7 @@ import CountriesContext from "../../context/countriesContext";
 export const ShowItemsList = () => {
   const { currentCountriesList } = useContext(CountriesContext);
   return (
-    <ShowItemsContainer>
+    <ShowItemsContainer role="main">
       {currentCountriesList.map((item, index) => (
         <ItemCard
           name={item.name}

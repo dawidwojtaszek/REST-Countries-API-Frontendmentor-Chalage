@@ -30,7 +30,7 @@ export const SearchSection = () => {
         />
       </Section.SearchBar>
 
-      <Section.Select onChange={filterByRegion}>
+      <Section.Select onChange={filterByRegion} aria-label="region">
         <Section.Option value="none" hidden>
           Filter by Region
         </Section.Option>
