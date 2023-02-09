@@ -3,6 +3,7 @@ export const SEO = ({ title }) => {
   return (
     <>
       <Helmet>
+        <html lang="en"></html>
         <title>{title}</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
