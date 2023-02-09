@@ -4,7 +4,7 @@ import { faMoon as darkIcon } from "@fortawesome/free-solid-svg-icons";
 import { faMoon as lightIcon } from "@fortawesome/free-regular-svg-icons";
 export const Header = ({ theme, toggle }) => {
   return (
-    <HeaderStyled role="banner">
+    <HeaderStyled>
       <HeaderStyled.Container>
         <HeaderStyled.Logo to="/">Where in the world?</HeaderStyled.Logo>
         <HeaderStyled.ThemeBtn onClick={() => toggle()}>
