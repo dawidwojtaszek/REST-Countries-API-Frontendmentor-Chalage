@@ -2,7 +2,7 @@ import CardWrap from "./item-card-style";
 export const ItemCard = ({ name, flag, population, region, capital }) => {
   return (
     <CardWrap>
-      <CardWrap.Flag src={flag} />
+      <CardWrap.Flag src={flag} alt={`${name} flag`} />
       <CardWrap.Info>
         <CardWrap.Name to={`/${name}`}>{name}</CardWrap.Name>
 

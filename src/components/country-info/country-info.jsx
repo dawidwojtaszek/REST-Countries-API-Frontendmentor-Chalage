@@ -19,7 +19,10 @@ export const CountryInfo = ({ country, border }) => {
       <BackBtn />
       <CountryContainer>
         <CountryContainer.FlagBox>
-          <CountryContainer.Flag src={country.flag} />
+          <CountryContainer.Flag
+            src={country.flag}
+            alt={`${country.name} flag`}
+          />
         </CountryContainer.FlagBox>
         <CountryContainer.InfoBox>
           <CountryContainer.Name>{country.name}</CountryContainer.Name>
