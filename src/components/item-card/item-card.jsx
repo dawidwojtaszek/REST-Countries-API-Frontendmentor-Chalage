@@ -1,5 +1,4 @@
 import CardWrap from "./item-card-style";
-import { Link } from "react-router-dom";
 export const ItemCard = ({ name, flag, population, region, capital }) => {
   return (
     <CardWrap>

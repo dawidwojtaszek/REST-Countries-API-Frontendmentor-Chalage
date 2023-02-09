@@ -7,13 +7,12 @@ export const FetchCountries = () => {
   const [isLoading, setLoading] = useState(true);
   const [isError, setError] = useState(false);
   const { setNewAllCountries, setCurrent } = useContext(CountriesContext);
-
+  const linkAllCountries = "https://restcountries.com/v2/all";
   useEffect(() => {
     const fetchData = (link) => {
       fetch(link)
         .then((response) => response.json())
         .then((data) => {
-          // setData(data);
           setNewAllCountries(data);
           setCurrent(data);
           setLoading(false);
@@ -22,10 +21,11 @@ export const FetchCountries = () => {
           setError(true);
           setLoading(false);
           console.log(error);
+          console.log(isError);
         });
     };
-    fetchData("https://restcountries.com/v2/all");
-  }, []);
+    fetchData(linkAllCountries);
+  }, [linkAllCountries]);
 
   return <div>{isLoading ? <Loading /> : <ShowItemsList />}</div>;
 };
