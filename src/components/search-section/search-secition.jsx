@@ -32,14 +32,14 @@ export const SearchSection = () => {
       </Section.SearchBar>
 
       <Section.Select onChange={filterByRegion} aria-label="region">
-        <Section.Option value="none" hidden role="Filter by region">
+        <Section.Option value="none" hidden>
           Filter by Region
         </Section.Option>
-        <Section.Option role="africa">Africa</Section.Option>
-        <Section.Option role="americas">Americas</Section.Option>
-        <Section.Option role="asia">Asia</Section.Option>
-        <Section.Option role="europe">Europe</Section.Option>
-        <Section.Option role="oceania">Oceania</Section.Option>
+        <Section.Option>Africa</Section.Option>
+        <Section.Option>Americas</Section.Option>
+        <Section.Option>Asia</Section.Option>
+        <Section.Option>Europe</Section.Option>
+        <Section.Option>Oceania</Section.Option>
       </Section.Select>
     </Section>
   );
